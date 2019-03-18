@@ -1,4 +1,4 @@
-package com.yfny.servicepojo.entity;
+package com.yfny.corepojo.entity;
 
 /**
  * 示例对象

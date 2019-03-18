@@ -1,4 +1,4 @@
-package com.yfny.servicepojo;
+package com.yfny.corepojo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ServicePojoApplicationTests {
+public class CorePojoApplicationTests {
 
     @Test
     public void contextLoads() {
