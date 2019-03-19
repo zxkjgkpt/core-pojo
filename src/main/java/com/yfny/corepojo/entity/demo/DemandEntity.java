@@ -1,4 +1,4 @@
-package com.yfny.corepojo.entity;
+package com.yfny.corepojo.entity.demo;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
