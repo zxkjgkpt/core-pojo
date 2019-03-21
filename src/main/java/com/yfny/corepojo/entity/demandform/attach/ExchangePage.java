@@ -1,6 +1,5 @@
 package com.yfny.corepojo.entity.demandform.attach;
 
-import com.duan.attach.response.Response;
 import net.sf.json.JSONObject;
 
 import java.math.BigDecimal;
@@ -8,7 +7,7 @@ import java.net.URLDecoder;
 
 public class ExchangePage {
 
-	
+
 	private String action;
 	private int respv;
 	private EnumUploadMode mode;
@@ -83,30 +82,30 @@ public class ExchangePage {
     public EnumUploadMode getMode() {
     	return mode;
     }
-    
+
     public void setMode(EnumUploadMode mode) {
     	this.mode = mode;
     }
-    
+
     public FileInfo getFileInfo() {
     	return fileInfo;
     }
-    
+
     public void setFileInfo(FileInfo fileInfo) {
     	this.fileInfo = fileInfo;
     }
-    
+
     public FileBlockInfo getFileBlockInfo() {
     	return blockInfo;
     }
-    
+
     public void setFileBlockInfo(FileBlockInfo blockInfo) {
     	this.blockInfo = blockInfo;
     }
-    
-    
+
+
 	public void combineFileInfo(FileInfo fileInfo)
-	{		
+	{
 		FileInfo f = this.getFileInfo();
 		f.setBlockSize(fileInfo.getBlockSize());
 		f.setBlockNo(fileInfo.getBlockNo());
@@ -114,15 +113,15 @@ public class ExchangePage {
 		f.setFileState(fileInfo.getFileState());
 		this.setFileInfo(f);
 	}
-    
-    public JSONObject toJson() {
-    	FileInfo info = this.fileInfo;
-    	Response response = new Response();	
-    	response.setAction(this.action + ":" + this.respv);
-    	response.setFileId(info.getFileId());
-    	response.setFileMd5(info.getFileMd5());
-    	response.setBlockNo(info.getBlockNo());
-    	response.setBlockSize(info.getBlockSize());
-    	return JSONObject.fromObject(response);
-    }
+
+//    public JSONObject toJson() {
+//    	FileInfo info = this.fileInfo;
+//    	Response response = new Response();
+//    	response.setAction(this.action + ":" + this.respv);
+//    	response.setFileId(info.getFileId());
+//    	response.setFileMd5(info.getFileMd5());
+//    	response.setBlockNo(info.getBlockNo());
+//    	response.setBlockSize(info.getBlockSize());
+//    	return JSONObject.fromObject(response);
+//    }
 }
