@@ -19,13 +19,26 @@
 
     <properties>
         <persistence-api.version>1.0</persistence-api.version>
+        <mysql-connector-java.version>5.1.47</mysql-connector-java.version>
     </properties>
 
     <dependencies>
+        <!-- 通用实体工具类 -->
+        <dependency>
+            <groupId>com.yfny</groupId>
+            <artifactId>utils-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!-- web项目依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- mysql数据库驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
         <!-- Java Persistence API定义了一种定义，
         可以将常规的普通Java对象（有时被称作POJO）映射到数据库 -->
@@ -33,16 +46,6 @@
             <groupId>javax.persistence</groupId>
             <artifactId>persistence-api</artifactId>
             <version>${persistence-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.json-lib</groupId>
-            <artifactId>json-lib</artifactId>
-            <version>2.4.1.1-RELEASE</version>
         </dependency>
     </dependencies>
 
