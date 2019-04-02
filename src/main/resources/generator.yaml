@@ -9,9 +9,9 @@ entityPackageName:
 path:
   controller:
   service:
-  interf:
-  entity: entity
+  entity: entity.demandform
   mapper:
+  sqlbuilder:
   hystrix:
   basetest:
   unittest:

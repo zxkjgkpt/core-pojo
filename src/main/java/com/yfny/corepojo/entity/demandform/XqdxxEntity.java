@@ -1,17 +1,20 @@
 package com.yfny.corepojo.entity.demandform;
 
+import com.yfny.corepojo.base.BaseEntity;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
-import java.util.List;
 
 /**
- * 需求单详情实体对象
- * Created by jisongZhou on 2019/3/25.
- **/
+ * 需求单详情Entity
+ * Author auto
+ * Date  2019-04-02
+ */
 @Table(name = "imp_xqd_xqdxx")
-public class XqdxxEntity implements Serializable {
+public class XqdxxEntity extends BaseEntity {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @Column(name = "XQDH")
@@ -102,18 +105,20 @@ public class XqdxxEntity implements Serializable {
     private String wshsj;
 
     @Column(name = "ZYLB")
-    private String zylb;    //专业类别
+    private String zylb;
 
     @Column(name = "SHTLSJ")
     private Long shtlsj;
 
     @Column(name = "SJSHQR")
-    private String sjshqr;  //省级审核确认
+    private String sjshqr;
 
     @Column(name = "TASK_ID")
-    private String taskId;  //流程实例ID
+    private String taskId;
 
-    private List<Object> zzids;
+
+    public XqdxxEntity(){
+    }
 
     public String getXqdh() {
         return xqdh;
@@ -379,11 +384,4 @@ public class XqdxxEntity implements Serializable {
         this.taskId = taskId;
     }
 
-    public List<Object> getZzids() {
-        return zzids;
-    }
-
-    public void setZzids(List<Object> zzids) {
-        this.zzids = zzids;
-    }
 }

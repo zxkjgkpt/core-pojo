@@ -15,9 +15,10 @@ public class GeneratorPojo {
 
     public static void singleInvokerTest() {
         Invoker invoker = new SingleInvoker.Builder()
-                .setTableName("user")
-                .setClassName("User")
-                .setDescription("用户")
+                .setTableName("imp_xqd_xqdxx")
+                .setClassName("Xqdxx")
+                .setDescription("需求单详情")
+                .setFirst(true)
                 .build();
         invoker.execute();
     }
