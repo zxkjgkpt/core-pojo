@@ -9,7 +9,7 @@ import javax.persistence.Table;
 /**
  * 需求单详情Entity
  * Author auto
- * Date  2019-04-02
+ * Date  2019-04-03
  */
 @Table(name = "imp_xqd_xqdxx")
 public class XqdxxEntity extends BaseEntity {

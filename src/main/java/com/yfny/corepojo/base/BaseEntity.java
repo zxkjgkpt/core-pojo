@@ -2,13 +2,17 @@ package com.yfny.corepojo.base;
 
 import javax.persistence.Transient;
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * 对象实体通用辅助Entity（含非数据库字段）
  * Author auto
- * Date  2019-04-02
+ * Date  2019-04-03
  */
 public class BaseEntity implements Serializable {
+
+    public final static String ASC = "ASC";//升序
+    public final static String DESC = "DESC";//降序
 
     @Transient
     private Integer pageNum;//当前页数
@@ -23,7 +27,7 @@ public class BaseEntity implements Serializable {
     private Long total;//总数
 
     @Transient
-    private String[] orders;//排序字段
+    private Map<String, String> orders;//排序字段及排序方式（升序，降序）
 
     public BaseEntity() {
 
@@ -61,12 +65,11 @@ public class BaseEntity implements Serializable {
         this.total = total;
     }
 
-    public String[] getOrders() {
+    public Map<String, String> getOrders() {
         return orders;
     }
 
-    public void setOrders(String[] orders) {
+    public void setOrders(Map<String, String> orders) {
         this.orders = orders;
     }
-
 }
