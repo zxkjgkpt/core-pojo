@@ -5,11 +5,13 @@ import com.yfny.corepojo.base.BaseEntity;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import java.util.List;
 
 /**
  * 需求单详情Entity
  * Author auto
- * Date  2019-04-03
+ * Date  2019-04-04
  */
 @Table(name = "imp_xqd_xqdxx")
 public class XqdxxEntity extends BaseEntity {
@@ -382,6 +384,31 @@ public class XqdxxEntity extends BaseEntity {
 
     public void setTaskId(String taskId) {
         this.taskId = taskId;
+    }
+
+    /**************************************此下为非数据库字段属性**************************************/
+
+    @Transient
+    private List<YwyxxEntity> ywyxxList;
+
+
+    @Transient
+    private List<YyyxxEntity> yyyxxList;
+
+    public List<YwyxxEntity> getYwyxxList() {
+        return ywyxxList;
+    }
+
+    public void setYwyxxList(List<YwyxxEntity> ywyxxList) {
+        this.ywyxxList = ywyxxList;
+    }
+
+    public List<YyyxxEntity> getYyyxxList() {
+        return yyyxxList;
+    }
+
+    public void setYyyxxList(List<YyyxxEntity> yyyxxList) {
+        this.yyyxxList = yyyxxList;
     }
 
 }
