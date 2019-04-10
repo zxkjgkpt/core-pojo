@@ -391,9 +391,11 @@ public class XqdxxEntity extends BaseEntity {
     @Transient
     private List<YwyxxEntity> ywyxxList;
 
-
     @Transient
     private List<YyyxxEntity> yyyxxList;
+
+    @Transient
+    private List<XqdFileEntity> xqdFileList;
 
     public List<YwyxxEntity> getYwyxxList() {
         return ywyxxList;
@@ -409,6 +411,14 @@ public class XqdxxEntity extends BaseEntity {
 
     public void setYyyxxList(List<YyyxxEntity> yyyxxList) {
         this.yyyxxList = yyyxxList;
+    }
+
+    public List<XqdFileEntity> getXqdFileList() {
+        return xqdFileList;
+    }
+
+    public void setXqdFileList(List<XqdFileEntity> xqdFileList) {
+        this.xqdFileList = xqdFileList;
     }
 
 }
