@@ -397,6 +397,15 @@ public class XqdxxEntity extends BaseEntity {
     @Transient
     private List<XqdFileEntity> xqdFileList;
 
+    @Transient
+    private String fjbz;//判断有无附件
+
+    @Transient
+    private String startTime;//开始日期
+
+    @Transient
+    private String endTime;//结束日期
+
     public List<YwyxxEntity> getYwyxxList() {
         return ywyxxList;
     }
@@ -421,4 +430,27 @@ public class XqdxxEntity extends BaseEntity {
         this.xqdFileList = xqdFileList;
     }
 
+    public String getFjbz() {
+        return fjbz;
+    }
+
+    public void setFjbz(String fjbz) {
+        this.fjbz = fjbz;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
 }
