@@ -1,6 +1,6 @@
 package com.yfny.corepojo.entity.demandform;
 
-import com.yfny.corepojo.base.BaseEntity;
+import com.yfny.utilscommon.basemvc.common.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -118,6 +118,14 @@ public class XqdxxEntity extends BaseEntity {
     @Column(name = "TASK_ID")
     private String taskId;
 
+    @Column(name = "SFYCGD")
+    private Long sfycgd;//是否异常工单
+
+    @Column(name = "SFTG")
+    private Long sftg;//是否通过
+
+    @Column(name = "FLOWID")
+    private String flowId; //作废原因
 
     public XqdxxEntity(){
     }
@@ -386,6 +394,30 @@ public class XqdxxEntity extends BaseEntity {
         this.taskId = taskId;
     }
 
+    public Long getSfycgd() {
+        return sfycgd;
+    }
+
+    public void setSfycgd(Long sfycgd) {
+        this.sfycgd = sfycgd;
+    }
+
+    public Long getSftg() {
+        return sftg;
+    }
+
+    public void setSftg(Long sftg) {
+        this.sftg = sftg;
+    }
+
+    public String getFlowId() {
+        return flowId;
+    }
+
+    public void setFlowId(String flowId) {
+        this.flowId = flowId;
+    }
+
     /**************************************此下为非数据库字段属性**************************************/
 
     @Transient
@@ -405,6 +437,21 @@ public class XqdxxEntity extends BaseEntity {
 
     @Transient
     private String endTime;//结束日期
+
+    @Transient
+    private String xqdType;//类型，填报/总览/审核
+
+    @Transient
+    private Boolean isSupplement;//是否需要补充材料
+
+    @Transient
+    private String gateway;//开发评估后面网关
+
+    @Transient
+    private Boolean isRealize;//是否能实现
+
+    @Transient
+    private String zfyy;//作废原因
 
     public List<YwyxxEntity> getYwyxxList() {
         return ywyxxList;
@@ -452,5 +499,45 @@ public class XqdxxEntity extends BaseEntity {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    public String getXqdType() {
+        return xqdType;
+    }
+
+    public void setXqdType(String xqdType) {
+        this.xqdType = xqdType;
+    }
+
+    public Boolean getSupplement() {
+        return isSupplement;
+    }
+
+    public void setSupplement(Boolean supplement) {
+        isSupplement = supplement;
+    }
+
+    public String getGateway() {
+        return gateway;
+    }
+
+    public Boolean getRealize() {
+        return isRealize;
+    }
+
+    public void setRealize(Boolean realize) {
+        isRealize = realize;
+    }
+
+    public void setGateway(String gateway) {
+        this.gateway = gateway;
+    }
+
+    public String getZfyy() {
+        return zfyy;
+    }
+
+    public void setZfyy(String zfyy) {
+        this.zfyy = zfyy;
     }
 }

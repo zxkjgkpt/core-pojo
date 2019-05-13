@@ -12,7 +12,7 @@ public class GeneratorPojo {
 
     public static void main(String[] args) {
         singleInvokerTest();
-        relationInvoker();
+        //relationInvoker();
     }
 
     public static void singleInvokerTest() {
@@ -40,14 +40,28 @@ public class GeneratorPojo {
 //                .setFirst(false)
 //                .build();
 //        invoker3.execute();
+//
+//        Invoker invoker4 = new SingleInvoker.Builder()
+//                .setTableName("imp_xqd_files")
+//                .setClassName("XqdFile")
+//                .setDescription("需求单附件")
+//                .setFirst(false)
+//                .build();
+//        invoker4.execute();
+//
+//        Invoker invoker5 = new SingleInvoker.Builder()
+//                .setTableName("imp_xqd_fileblocks")
+//                .setClassName("XqdFileBlocks")
+//                .setDescription("需求单附件")
+//                .build();
+//        invoker5.execute();
 
-        Invoker invoker4 = new SingleInvoker.Builder()
-                .setTableName("imp_xqd_files")
-                .setClassName("XqdFile")
-                .setDescription("需求单附件")
-                .setFirst(false)
+        Invoker invoker6 = new SingleInvoker.Builder()
+                .setTableName("imp_flow_log")
+                .setClassName("XqdFlowLog")
+                .setDescription("需求单操作记录")
                 .build();
-        invoker4.execute();
+        invoker6.execute();
     }
 
     public static void relationInvoker() {

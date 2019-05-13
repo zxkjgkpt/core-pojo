@@ -1,16 +1,10 @@
 package com.yfny.corepojo.entity.demandform;
 
-import com.yfny.corepojo.base.BaseEntity;
+import com.yfny.utilscommon.basemvc.common.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-import java.util.List;
-import java.math.BigDecimal;
-import java.sql.Date;
-import java.sql.Time;
-import java.sql.Timestamp;
 
 /**
  * 需求单业务域详情Entity
